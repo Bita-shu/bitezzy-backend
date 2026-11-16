@@ -25,7 +25,7 @@ import com.example.demo.loginPage.LoginPage;
 import jakarta.mail.MessagingException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class FinalController {
 
 	@Autowired
