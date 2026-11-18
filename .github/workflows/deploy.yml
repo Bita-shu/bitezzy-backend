@@ -21,5 +21,5 @@ jobs:
             cd ~/bitezzy-backend
             git pull origin main
             mvn clean package -DskipTests
-            pkill -f 'java -jar' || true
-            nohup java -jar target/Final-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
+            pkill -f '[j]ava -jar' || true
+            nohup java -jar target/Final-0.0.1-SNAPSHOT.jar > app.log 2>&1 < /dev/null &
