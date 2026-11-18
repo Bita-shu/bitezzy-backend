@@ -22,4 +22,7 @@ jobs:
             git pull origin main
             mvn clean package -DskipTests
             pkill -f '[j]ava -jar' || true
-            nohup java -jar target/Final-0.0.1-SNAPSHOT.jar > app.log 2>&1 < /dev/null &
+            sleep 2
+            nohup java -jar target/Final-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
+            disown
+            echo "Deployment completed successfully"
